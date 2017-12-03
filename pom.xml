@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>pratik</groupId>
+  <artifactId>HQL_Select_Queries</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>HQL_Select_Queries</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+      <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>5.2.12.Final</version>
+</dependency>
+<dependency>
+    	<groupId>oracle</groupId>
+    	<artifactId>ojdbc6</artifactId>
+    	<version>11.2.0.4.0</version>
+    	<scope>runtime</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-c3p0</artifactId>
+    <version>5.1.0.Final</version>
+</dependency>
+    
+  </dependencies>
+  <build>
+	<plugins>
+		<plugin>
+			 <groupId>org.codehaus.mojo</groupId>
+			 <artifactId>exec-maven-plugin</artifactId>
+			 <version>1.4.0</version>
+				<configuration>
+					<mainClass>com.pratik.user.ClientApp_HQL_specific_multilple</mainClass>
+				</configuration>
+		</plugin>
+	</plugins>
+  </build>
+
+</project>
