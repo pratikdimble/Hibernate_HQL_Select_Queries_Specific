@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+	<!-- Connection Properties -->
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+		<property name="connection.username">system</property>
+		<property name="connection.password">oracle</property>
+	<!-- C3P0  Connection pooling Properties -->
+		<property name="c3p0.max_size">100</property>
+		<property name="c3p0.min_size">10</property>
+		<property name="c3p0.timeout">2000</property>
+		<property name="c3p0.acquire_increment">2</property>
+	<property name="connection.provider_class">org.hibernate.c3p0.internal.C3P0ConnectionProvider</property>
+		
+	<!--Hibernate Properties  -->
+		<property name="format_sql">true</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hbm2ddl.auto">update</property>
+
+		<mapping class="com.pratik.domain.prod"/>
+
+
+	</session-factory>
+</hibernate-configuration>
